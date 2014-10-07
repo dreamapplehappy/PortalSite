@@ -4,6 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 	<style type="text/css">
 		*{margin: 0; padding: 0}
 		body{height: 3600px;}
@@ -20,19 +33,28 @@
 </head>
 <body>
 	<div id="header">
-		<div id="change_t">主题</div>
+		<!-- <div id="change_t">主题</div> -->
+		<button id="change_t" class="glyphicon glyphicon-th-large"></button>
 		<div id="header_c">
-			<a href="" id="logo_f"><img id="logo" src="images/android.jpg" alt="LOGO"></a>
+			<a href="" id="logo_f">
+				<img id="logo" src="images/android.jpg" alt="LOGO">
+			</a>
 			<div id="slogan">精研为骨 创新为魂</div>
 			<form action="http://www.baidu.com/s" id="search" method="get">
 				<input type="text" id="search_t" placeholder="去搜吧！"/>
-				<input type="submit" id="search_b" value="搜索"/>
+				<!-- <input type="submit" id="search_b" value=""/> -->
+				<button type="submit"  id="search_b">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
 			</form>
-			<div id="intro">实验班介绍</div>
-			<div id="login" class="personal_o">登录</div>
+			<!-- <div id="intro" class="">实验班介绍</div> -->
+			<!-- <div id="login" class="personal_o">登录</div>
 			<div id="register" class="personal_o">注册</div>
-			<div id="logout" class="personal_o">退出</div>
-			
+			<div id="logout" class="personal_o">退出</div> -->
+			<button id="intro" class="btn btn-primary">实验班介绍</button>
+			<button id="login" class="personal_o glyphicon glyphicon-log-in"></button>
+			<button id="register" class="personal_o glyphicon glyphicon-edit"></button>
+			<button id="logout" class="personal_o glyphicon glyphicon-log-out"></button>
 		</div>
 	</div>
 	<div id="body">
