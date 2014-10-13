@@ -78,8 +78,9 @@ body {
     display: none;
 }
 
-#header{width: 100%; height: 50px; background-color: black; z-index: 999; position: fixed; top: 0px;
-	   }
+#header{width: 100%; height: 50px; background-color: black; z-index: 1001; position: fixed; top: 0px;}
+#header #back{width: 100px; height: 50px; background-color: #999; color: white; font-size: 20px; line-height: 50px;
+                        cursor: pointer; float: right;}
 
 .step{
 	position: relative;
@@ -203,5 +204,5 @@ body {
     transition:         opacity 1s 2s,         transform 0.5s 1s;
 }
 
-.impress-enabled          { pointer-events: none }
+.impress-enabled          { pointer-events: auto } //none
 .impress-enabled #impress { pointer-events: auto }

@@ -149,7 +149,7 @@
     // `computeWindowScale` counts the scale factor between window size and size
     // defined for the presentation in the config.
     var computeWindowScale = function ( config ) {
-        var hScale = window.innerHeight / config.height,
+        var hScale = window.innerHeight / config.height,                //**********************
             wScale = window.innerWidth / config.width,
             scale = hScale > wScale ? wScale : hScale;
         
@@ -199,7 +199,7 @@
     // some default config values.
     var defaults = {
         width: 1024,
-        height: 768,
+        height: 768, //768
         maxScale: 1,
         minScale: 0,
         
@@ -361,10 +361,10 @@
             root.appendChild(canvas);
             
             // set initial styles
-            document.documentElement.style.height = "100%";
+            document.documentElement.style.height = "10%"; //100%
             
             css(body, {
-                height: "100%",
+                height: "100%", //100%
                 overflow: "hidden"
             });
             

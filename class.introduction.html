@@ -6,15 +6,27 @@
 
 	<link href="css/class.introduction.css" rel="stylesheet" />
 
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#back").bind("click",function(){
+				window.location.href="index.html";
+			})
+		});
+	</script>
+
 	
 </head>
 <body class="impress-not-supported">
 	<div class="fallback-message">
 		<p>您的浏览器不支持这些新特性，请使用最新版本的谷歌，火狐浏览器。</p>
 	</div>
-	
-	<div id="header"></div>
 
+	<div id="header">
+		<div id="back">返回到首页</div>
+	</div>
+	
 	<div id="impress">
 		<div id="bored" class="step slide" data-x="-3000" data-y="-1000">
 			<div class="teacher-pic">
