@@ -12,6 +12,20 @@
 		$(function(){
 			$("#back").bind("click",function(){
 				window.location.href="index.html";
+			});
+			$("#close-canvas").bind("click",function(){
+				if("隐藏计时器" == $(this).text()){
+					$("#canvas").hide();
+					//clearInterval(countTime);
+					//alert(countTime);
+					$(this).text("显示计时器");
+					$("#canvas-subs").show();
+				}
+				else{
+					$("#canvas-subs").hide();
+					$(this).text("隐藏计时器");
+					$("#canvas").show();
+				}
 			})
 		});
 	</script>
@@ -25,10 +39,26 @@
 
 	<div id="header">
 		<div id="back">返回到首页</div>
+		<div id="close-canvas">隐藏计时器</div>
+	</div>
+
+	<canvas id="canvas" style="background-color:#000;">
+		当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+
+	<div id="canvas-subs">
+		哈哈，被我猜到了吧，你是不是有密集恐惧症; 其实，我有，啦啦啦。。。
+	</div>
+	
+	<div id="body">
+		
 	</div>
 	
 	<div id="impress">
 		<div id="bored" class="step slide" data-x="-3000" data-y="-1000">
+		</div>
+
+		<div class="step slide" data-x="-1500" data-y="-1000">
 			<div class="teacher-pic">
 				<img src="images/king.jpg" alt="boss">
 			</div>
@@ -40,22 +70,6 @@
 					<tr class="motto info-b"><td class="td-l">座右铭：</td><td>Never Give Up!</td></tr>
 					<tr class="hobbies info-b"><td class="td-l">爱好：</td><td>打篮球...</td></tr>
 					<tr class="introduction"><td class="td-l">简介：</td><td>硕士研究生，讲师，系统分析师。资深的互联网玩家，执着的互联网思维布道者，热爱开源文化与开源工具，擅长WEB应用的系统架构与设计开发，追逐过一串串热门或冷门的技术，创建过大大小小的网站与企业。主讲课程：软件工程、科技论文写作、Linux系统管理、WEB应用程序设计(PHP)。</td></tr>
-				</table>
-			</div>
-		</div>
-
-		<div class="step slide" data-x="-1500" data-y="-1000">
-			<div class="teacher-pic">
-				<img src="images/intro-book.jpg" alt="boss">
-			</div>
-			<div class="teacher-intro">
-				<table>
-					<tr class="position"><td colspan='2'>BOSS</td></tr>
-					<tr class="name info-a"><td class="td-l">姓名：</td><td>舒亚非</td></tr>
-					<tr class="birthday info-a"><td class="td-l">出生日期：</td><td>19..</td></tr>
-					<tr class="motto info-b"><td class="td-l">座右铭：</td><td>llll</td></tr>
-					<tr class="hobbies info-b"><td class="td-l">爱好：</td><td>打篮球</td></tr>
-					<tr class="introduction"><td class="td-l">简介：</td><td>.....</td></tr>
 				</table>
 			</div>
 		</div>
@@ -108,14 +122,14 @@
 			</div>
 		</div>
 
-		<div class="step team-intro" data-x="3000" data-y="0" data-rotate-x="360">
-			小组介绍:-D
+		<div class="step team-intro" data-x="3000" data-y="0" data-rotate-y="720">
+			我们该怎么介绍大家呢？赶紧拿起手中的电话，拨打10101010001001001吧！
 		</div>
 
-		<div class="step team-intro-a" data-x="1500" data-y="0" data-rotate="900">
+		<div class="step team-intro-a" data-x="1500" data-y="0" data-rotate-x="360"> 
 			<table class="team-detail">
 				<tr>
-					<td>1刘宏志</td>
+					<td>刘宏志</td>
 					<td>刘铁</td>
 				</tr>
 				<tr>
@@ -132,16 +146,16 @@
 		<div class="step team-intro-a" data-x="0" data-y="0" data-rotate-y="-90">
 			<table class="team-detail">
 				<tr>
-					<td>2刘宏志</td>
-					<td>刘铁</td>
+					<td>帅锅</td>
+					<td>美女</td>
 				</tr>
 				<tr>
-					<td>许鹏飞</td>
-					<td>程彦</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 				<tr>
-					<td>王雪莹</td>
-					<td>罗鹏展</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 			</table>
 		</div>
@@ -149,54 +163,61 @@
 		<div class="step team-intro-a" data-x="-1500" data-y="0" data-rotate-y="-90">
 			<table class="team-detail">
 				<tr>
-					<td>3刘宏志</td>
-					<td>刘铁</td>
+					<td>帅锅</td>
+					<td>美女</td>
 				</tr>
 				<tr>
-					<td>许鹏飞</td>
-					<td>程彦</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 				<tr>
-					<td>王雪莹</td>
-					<td>罗鹏展</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 			</table>
 		</div>
 		<div class="step team-intro-a" data-x="-3000" data-y="0" data-rotate-y="-90">
 			<table class="team-detail">
 				<tr>
-					<td>4刘宏志</td>
-					<td>刘铁</td>
+					<td>帅锅</td>
+					<td>美女</td>
 				</tr>
 				<tr>
-					<td>许鹏飞</td>
-					<td>程彦</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 				<tr>
-					<td>王雪莹</td>
-					<td>罗鹏展</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 			</table>
 		</div>
 		<div class="step team-intro-a" data-x="-3000" data-y="-1500" data-rotate-y="-90">
 			<table class="team-detail">
 				<tr>
-					<td>5刘宏志</td>
-					<td>刘铁</td>
+					<td>帅锅</td>
+					<td>美女</td>
 				</tr>
 				<tr>
-					<td>许鹏飞</td>
-					<td>程彦</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 				<tr>
-					<td>王雪莹</td>
-					<td>罗鹏展</td>
+					<td>帅锅</td>
+					<td>帅锅</td>
 				</tr>
 			</table>
 		</div>
 
-		<div class="step task" data-x="-1500" data-y="-1500" data-z="-1500" data-rotate="900">
-			我们的目标
+		<div class="step task" data-x="-1500" data-y="-1500" data-z="-72000" data-rotate="3600">
+			<p>成功属于永远不放弃的人</p>
+			<p>人因为梦想而伟大，早日达到自己的目标 用心血铸就辉煌的明天!</p>
+			<p>机会总在怀疑犹豫中产生 在叫好后悔中结束</p>
+			<p>走自的路让别人去说吧</p>
+			<p>倾材足以聚人，量宽足已得人，身先足以率人,律己足以服人，得人心者得天下!</p>
+			<p>真诚沟通 互助学习 态度积极 快速行动 一直向前走不回头 脚踏实地向前走，阳光总在风雨后，风雨过后有彩虹</p>
+			<p>选择比努力重要，选择不对努力白费!</p>
+			<p>没有失败，只有停止成功</p>
 		</div>
 		<!-- <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
 		</div> -->
@@ -205,6 +226,9 @@
 	<div class="hint">
 		<p>☺请使用空格键或者方向键进行浏览☺</p>
 	</div>
+
+	<script src="js/time.animation.js"></script>
+	<script src="js/location.array.js"></script>
 
 	<script>
 		if ("ontouchstart" in document.documentElement) { 
