@@ -100,8 +100,8 @@ body {
 }
 
 #bored{
-    line-height: 600px;
-    font-size: 200px;
+    line-height: 30px;
+    font-size: 30px;
     text-align: center;
     color: black;
 }
@@ -186,7 +186,7 @@ body {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 400px;
+    bottom: 60px;
     background: rgba(0,0,0,0.5);
     color: #EEE;
     text-align: center;

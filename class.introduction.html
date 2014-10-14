@@ -26,7 +26,37 @@
 					$(this).text("隐藏计时器");
 					$("#canvas").show();
 				}
-			})
+			});
+		});
+		/*Typewriter*/
+		$(function(){
+			var typewriter;
+			var sentence ={};
+			sentence[1] = '成功属于永远不放弃的人';
+			sentence[2] = '人因为梦想而伟大，早日达到自己的目标 用心血铸就辉煌的明天!';
+			sentence[3] = '机会总在怀疑犹豫中产生 在叫好后悔中结束';
+			sentence[4] = '走自的路让别人去说吧';
+			sentence[5] = '倾材足以聚人，量宽足已得人，身先足以率人,律己足以服人，得人心者得天下!';
+			sentence[6] = '真诚沟通 互助学习 态度积极 快速行动 一直向前走不回头 脚踏实地向前走，阳光总在风雨后，风雨过后有彩虹';
+			sentence[7] = '选择比努力重要，选择不对努力白费!';
+			sentence[8] = '没有失败，只有停止成功';
+			var index = 1;
+			var length = 0;
+			var delay = 200;
+			var p = 1;
+			var sum_p = 8;
+			function show(){  
+				if(sum_p == p){
+					clearInterval(typewriter); 
+				}
+				if(index == sentence[p].length+1){  
+					p++; 
+					index = 1;
+				}  
+				$("#bored p."+p).text(sentence[p].substr(0,index));
+				index++;  
+			} 
+			typewriter=setInterval(show, delay);
 		});
 	</script>
 
@@ -56,6 +86,14 @@
 	
 	<div id="impress">
 		<div id="bored" class="step slide" data-x="-3000" data-y="-1000">
+			<p class="1"></p>
+			<p class="2"></p>
+			<p class="3"></p>
+			<p class="4"></p>
+			<p class="5"></p>
+			<p class="6"></p>
+			<p class="7"></p>
+			<p class="8"></p>
 		</div>
 
 		<div class="step slide" data-x="-1500" data-y="-1000">
